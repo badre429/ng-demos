@@ -3,7 +3,7 @@
 @include angular-material-theme($theme);
 @import 'ng-select';
 @include ng-select-theme($theme);
-@import '../app/component/app/app.component';
+@import 'app.component';
 @import 'utilities/utilities';
 @import 'layout';
 @import 'core/background';
