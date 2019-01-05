@@ -7,14 +7,26 @@
     <table class="clean-spacing-table" style="padding:5px;">
       <tr *ngFor="let col of colors">
         <td (click)="selected = 'mat-' + col">
-          <div mat-ripple class=" pallete-box mat-{{ col }}">{{ col }}</div>
+          <div
+            mat-ripple
+            [matRippleCentered]="true"
+            [matRippleUnbounded]="false"
+            class=" pallete-box mat-{{ col }}"
+          >
+            {{ col }}
+          </div>
         </td>
 
         <td
           (click)="selected = 'mat-' + col + '-' + sucol"
           *ngFor="let sucol of subColors"
         >
-          <div mat-ripple class=" pallete-box mat-{{ col }}-{{ sucol }}">
+          <div
+            mat-ripple
+            [matRippleCentered]="true"
+            [matRippleUnbounded]="false"
+            class=" pallete-box mat-{{ col }}-{{ sucol }}"
+          >
             {{ sucol }}
           </div>
         </td>
