@@ -1,0 +1,32 @@
+[dir='rtl'] {
+  // @include mat-core($config-rtl);
+  @include angular-material-typography($config-rtl);
+
+  .mat-label {
+    font-weight: 600;
+    font-size: 17px;
+  }
+
+  .mat-radio-label-content {
+    font-weight: 500;
+    font-size: 17px;
+  }
+}
+
+[dir='rtl'] {
+
+  html,
+  body {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .table>thead>tr>th {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .table>tbody>tr>td {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,306 @@
+/* -- Material Design Table style -------------- */
+// Variables
+// ---------------------
+$table-header-font-weight: 500;
+$table-header-font-color: #5a5a5a;
+$table-header-padding: 12px;
+$table-condensed-header-padding: $table-header-padding/2;
+$table-cell-padding: 10px;
+$table-condensed-cell-padding: $table-cell-padding/2;
+$table-bg: #fff;
+$table-bg-accent: #f5f5f5;
+$table-bg-hover: rgba(0, 0, 0, 0.12);
+$table-bg-active: $table-bg-hover;
+$table-border-color: #e0e0e0;
+$table-grey-header-color: #fafafa;
+
+// Tables
+//
+// -----------------
+// Baseline styles
+.table {
+  width: 100%;
+  max-width: 100%;
+  background-color: $table-bg;
+  border-spacing: 0;
+
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      transition: all 0.3s ease;
+
+      > th {
+        text-align: left;
+
+        [dir='rtl'] & {
+          text-align: right;
+        }
+
+        padding: $table-header-padding;
+        vertical-align: middle;
+        border-top: 0;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      > td {
+        text-align: left;
+
+        [dir='rtl'] & {
+          text-align: right;
+        }
+
+        padding: $table-cell-padding;
+        vertical-align: middle;
+        border-top: 0;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  > thead > tr > th {
+    font-weight: $table-header-font-weight;
+    color: $table-header-font-color;
+    vertical-align: bottom;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+
+  > tbody + tbody {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  // Nesting
+  .table {
+    background-color: $table-bg;
+  }
+
+  // Remove border
+  .no-border {
+    border: 0;
+  }
+}
+
+// Condensed table w/ half padding
+.table-condensed {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th {
+        padding: $table-condensed-header-padding;
+      }
+
+      > td {
+        padding: $table-condensed-cell-padding;
+      }
+    }
+  }
+}
+
+// Bordered version
+//
+// Add horizontal borders between columns.
+.table-bordered {
+  border: 0;
+
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border: 0;
+        border-bottom: 1px solid $table-border-color;
+      }
+    }
+  }
+
+  > thead > tr {
+    > th,
+    > td {
+      border-bottom-width: 2px;
+    }
+  }
+}
+
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+.table-striped {
+  > tbody > tr:nth-child(even) {
+    > td,
+    > th {
+      background-color: $table-bg-accent;
+    }
+  }
+}
+
+// Hover effect
+//
+.table-hover {
+  > tbody > tr:hover {
+    > td,
+    > th {
+      background-color: $table-bg-hover;
+    }
+  }
+}
+
+// CSS/LESS Color variations
+//
+// --------------------------------
+.table-striped.table-mc-red > tbody > tr:nth-child(odd) > td,
+.table-striped.table-mc-red > tbody > tr:nth-child(odd) > th {
+  background-color: #fde0dc;
+}
+
+.table-hover.table-mc-red > tbody > tr:hover > td,
+.table-hover.table-mc-red > tbody > tr:hover > th {
+  background-color: #f9bdbb;
+}
+
+@media screen and (max-width: 767px) {
+  .table-responsive-vertical .table-striped.table-mc-red > tbody > tr > td,
+  .table-responsive-vertical
+    .table-striped.table-mc-red
+    > tbody
+    > tr:nth-child(odd) {
+    background-color: $table-bg;
+  }
+
+  .table-responsive-vertical
+    .table-striped.table-mc-red
+    > tbody
+    > tr
+    > td:nth-child(odd) {
+    background-color: #fde0dc;
+  }
+
+  .table-responsive-vertical .table-hover.table-mc-red > tbody > tr:hover > td,
+  .table-responsive-vertical .table-hover.table-mc-red > tbody > tr:hover {
+    background-color: $table-bg;
+  }
+
+  .table-responsive-vertical .table-hover.table-mc-red > tbody > tr > td:hover {
+    background-color: #f9bdbb;
+  }
+}
+
+.table-grey-header {
+  thead {
+    background-color: #eeeeee;
+  }
+}
+
+table.properties {
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-shadow: 0 2px 2px rgba($black, 0.24), 0 0 2px rgba($black, 0.12);
+  border-radius: 2px;
+  background: $offwhite;
+
+  &.is-full-width {
+    width: 100%;
+  }
+
+  &.is-fixed-layout {
+    table-layout: fixed;
+  }
+
+  thead > {
+    vertical-align: middle;
+    border-color: inherit;
+
+    tr {
+      vertical-align: inherit;
+      border-color: inherit;
+    }
+
+    tr > th,
+    td {
+      background: rgba($lightgray, 0.2);
+      border-bottom: 1px solid $lightgray;
+      color: $darkgray;
+      font-size: 12px;
+      font-weight: 500;
+      text-align: left;
+
+      [dir='rtl'] & {
+        text-align: right;
+      }
+
+      text-transform: uppercase;
+      line-height: 28px;
+      padding: 5px 15px;
+    }
+  }
+
+  tbody > tr > {
+    th,
+    td {
+      border-bottom: 1px solid $lightgray;
+      padding: 5px 15px;
+      text-align: left;
+
+      [dir='rtl'] & {
+        text-align: right;
+      }
+
+      line-height: 24px;
+      vertical-align: top;
+
+      @media (max-width: 480px) {
+        &:before {
+          // content: **ADD TABLE HEADER**;
+          display: inline-block;
+        }
+      }
+    }
+
+    td {
+      letter-spacing: 0.3px;
+
+      tr td:first-child {
+        @media (max-width: 480px) {
+          // background-color: $lightgray;
+        }
+      }
+    }
+
+    th {
+      background: rgba($lightgray, 0.2);
+      border-right: 1px solid $lightgray;
+      text-align: right;
+
+      [dir='rtl'] & {
+        border-right: none;
+        border-left: 1px solid $lightgray;
+        text-align: left;
+      }
+
+      font-size: 16px;
+      font-weight: 600;
+      max-width: 100px;
+    }
+
+    &:last-child td {
+      border: none;
+
+      @media (max-width: 480px) {
+        border-bottom: 1px solid $lightgray;
+      }
+    }
+  }
+}

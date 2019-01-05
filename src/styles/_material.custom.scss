@@ -1,0 +1,62 @@
+.mat-header-row {
+  height: 42px !important;
+  background: #F5F5F5;
+
+  .mat-header-cell .mat-sort-header-button {
+    text-transform: uppercase;
+  }
+}
+
+mat-footer-row,
+mat-row {
+  min-height: 36px !important;
+}
+
+mat-row {
+  &:hover {
+    background: rgba(black, 0.04);
+  }
+}
+
+tr.mat-header-row {
+  height: 42px !important;
+  background: #F5F5F5;
+
+  .mat-header-cell .mat-sort-header-button {
+    text-transform: uppercase;
+  }
+}
+
+tr.mat-footer-row,
+tr.mat-row {
+  height: 36px !important;
+}
+
+tr.mat-row {
+  &:hover {
+    background: rgba(black, 0.04);
+  }
+}
+
+.cdk-overlay-pane {
+  max-height: 100vh;
+}
+
+.mat-actions {
+  background: #F5F5F5;
+
+  .mat-raised-button,
+  .mat-button {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.pad-none {
+  .mat-dialog-container {
+    padding: 0 !important;
+  }
+}
+.pad-none .mat-expansion-panel-body {
+  padding: 0 !important;
+}

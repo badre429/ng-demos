@@ -1,0 +1,6 @@
+<p>
+  {{Count$| async}}
+</p>
+<mat-divider>
+<button mat-button (click)="CountNext(Count+1)" color="primary">++</button>
+<button mat-button (click)="CountNext(Count-1)" color="warn">--</button>

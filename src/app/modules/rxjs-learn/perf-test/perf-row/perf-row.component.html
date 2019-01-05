@@ -1,0 +1,16 @@
+<td >{{index}}</td>
+<td *ngFor="let col of row"  mat-ripple style="height:32px; width:120px;">
+  <mat-select [ngModel]="col" *ngIf="ShowValue$|async; else elseTemplate">
+    <mat-option *ngFor="let c of choices" [value]="c">{{c}}</mat-option>
+  </mat-select>
+
+  <ng-template #elseTemplate>
+    <!--  <mat-input-container  >
+                <input mdInput [ngModel]="col" >
+              </mat-input-container>-->
+    <input [ngModel]="col" placeholder="placeholder">
+  </ng-template>
+
+
+
+</td>

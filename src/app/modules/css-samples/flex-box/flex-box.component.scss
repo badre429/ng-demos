@@ -1,0 +1,54 @@
+.all-div-shadow div{    
+    padding:15px;
+    font-size: 18px;
+    box-shadow: rgba(0, 0, 0, 0.118) 0 10px 15px, rgba(0, 0, 0, 0.239) 0 5px 15px;
+}
+.fx-table{ 
+   table-layout: fixed;
+   width: 100%;
+   border-spacing: 0!important;
+}
+.fx-table {
+   border: 1px solid rgba(0, 0, 0, 0.55);
+   thead,
+   tbody,
+   tfoot {
+     tr {
+       th,
+       td {
+         border: 1px solid rgba(0, 0, 0, 0.55);
+       }
+     }
+   }
+   thead tr {
+     th,
+     td {
+       border-bottom-width: 2px;
+     }
+   }
+ }
+
+.fx-1 .mat-toolbar-row{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+} 
+.fx-1-1{
+    display: flex;  
+    flex-direction: row; 
+    flex-wrap: wrap;
+     
+}
+.fx-1-1-end{ 
+    flex-grow:40px;
+}
+.fx-1-1-1 {
+    justify-content: center;
+    text-align: center;
+}
+.fx-toolbar{
+      display: flex;  
+    flex-direction: row wrap; 
+    flex-wrap: wrap;
+}
+ 

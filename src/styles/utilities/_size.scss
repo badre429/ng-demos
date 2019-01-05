@@ -1,0 +1,47 @@
+@mixin td-size-utilities() {
+  $size-list: 12 16 24 32 48 50 64 72 100 128 192 256 320 512 1024;
+  @each $current-size in $size-list {
+    $i: index($size-list, $current-size);
+    .size-#{$current-size} {
+      height: #{$current-size}px;
+      width: #{$current-size}px;
+    }
+  }
+  @each $current-size in $size-list {
+    $i: index($size-list, $current-size);
+    .size-height-#{$current-size} {
+      height: #{$current-size}px!important;
+      width: auto;
+    }
+    .min-height-#{$current-size} {
+      min-height: #{$current-size}px!important;
+    }
+  }
+  @each $current-size in $size-list {
+    $i: index($size-list, $current-size);
+    .size-width-#{$current-size} {
+      width: #{$current-size}px;
+      height: auto;
+    }
+    .min-width-#{$current-size} {
+      min-width: #{$current-size}px;
+    }
+  }
+  @each $current-size in $size-list {
+    $i: index($size-list, $current-size);
+    .size-mat-#{$current-size} {
+      height: #{$current-size}px !important;
+      width: #{$current-size}px!important;
+      line-height: #{$current-size/2}px!important;
+    }
+  }
+  .full-h {
+    height: 100%;
+    .mat-tab-body-wrapper {
+      height: 100%;
+    }
+  }
+  .full-w {
+    width: 100%;
+  }
+}

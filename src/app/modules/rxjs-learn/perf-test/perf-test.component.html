@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-tab-group>
+   
+      <mat-tab label="read only"> 
+      <!--<table>
+        <tr *ngFor="let row of table">
+
+          <td *ngFor="let col of row">
+            {{col}}
+          </td>
+        </tr>
+      </table>-->
+    </mat-tab>
+      <mat-tab label="Editable mode"> 
+        <mat-checkbox [(ngModel)]="ShowValue">Test</mat-checkbox>
+        {{ShowValue}}
+      <table>
+        <tr  *ngFor="let row of table;let i =index" perf-row [ShowValue]="ShowValue" [choices]='choices' [row]='row' [index]="i">
+
+        </tr>
+      </table>
+    </mat-tab>
+  </mat-tab-group>
+
+</mat-card>
