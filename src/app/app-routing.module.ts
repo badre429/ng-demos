@@ -4,10 +4,10 @@ import { HomeComponent } from './component/home/home.component';
 export const MENU = [
   { name: 'Material Pallete', route: 'css' },
   { name: 'Flex layout', route: 'css/flex' },
-  { name: 'Properties table', route: 'lab/properties' }, 
+  { name: 'Properties table', route: 'lab/properties' },
   { name: 'rxjs performance', route: 'rxjs' },
   { name: 'rxjs observable', route: 'rxjs/obs' },
-  { name: 'Animation Test', route: 'animations' }
+  { name: 'Orgnisation Chart', route: 'org/main' }
 ];
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,6 +24,10 @@ const routes: Routes = [
   {
     path: 'lab',
     loadChildren: './modules/lab/lab.module#LabModule'
+  },
+  {
+    path: 'org',
+    loadChildren: './modules/org-chart/org-chart.module#OrgChartModule'
   }
 ];
 
