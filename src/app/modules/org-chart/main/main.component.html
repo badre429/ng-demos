@@ -1,3 +1,7 @@
-<p>
-  main works!
-</p>
+<mat-card class="organization-chart">
+  <ng-organization-chart
+    [data]="data"
+    (onClickNode)="clickNode($event)"
+    (onDragNode)="dragNode($event)"
+  ></ng-organization-chart>
+</mat-card>

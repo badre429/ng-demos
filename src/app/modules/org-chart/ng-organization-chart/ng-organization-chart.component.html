@@ -1,0 +1,17 @@
+<div
+  class="tree-pane"
+  (mousedown)="onmousedown($event)"
+  (mouseup)="onmouseup($event)"
+  (mouseleave)="onmouseup($event)"
+  (mousemove)="onmousemove($event)"
+  (mousewheel)="onmousewheel($event)"
+>
+  <div class="tree-paning-container" [style.transform]="paneTransform">
+    <ng-organization-chart-list
+      [ngClass]="'ng-organization-chart-list'"
+      [nodeList]="data"
+      (onClickNode)="onClickDeepNode($event)"
+      (onDragNode)="onDragDeepNode($event)"
+    ></ng-organization-chart-list>
+  </div>
+</div>
