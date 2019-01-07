@@ -2,15 +2,16 @@
 <div
   class="container"
   (click)="clickNode()"
-  draggable
-  droppable
-  [dragData]="node"
+
+
   (onDrop)="dropNode($event)"
 >
   {{ node.id }}
 </div>
 <div class="expand-button-container" *ngIf="node.children.length > 0">
+    <!-- (onDragNode)="onDragDeepNode($event)"  [dragData]="node" draggable  droppable-->
   <!--
+
     <div class="expand-button" (click)="changeChildrenStyleToHorizontal()" *ngIf="childrenStyleClass == 'vertical'">V</div>
     <div class="expand-button" (click)="changeChildrenStyleToVertical()" *ngIf="childrenStyleClass != 'vertical'">H</div>
     -->
@@ -19,7 +20,6 @@
   [ngClass]="'ng-organization-chart-list'"
   [nodeList]="node.children"
   (onClickNode)="onClickDeepNode($event)"
-  (onDragNode)="onDragDeepNode($event)"
   *ngIf="isChildrenVisible && node.children.length > 0"
   [class]="childrenStyleClass"
 ></ng-organization-chart-list>

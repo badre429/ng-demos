@@ -7,7 +7,8 @@ export const MENU = [
   { name: 'Properties table', route: 'lab/properties' },
   { name: 'rxjs performance', route: 'rxjs' },
   { name: 'rxjs observable', route: 'rxjs/obs' },
-  { name: 'Orgnisation Chart', route: 'org/main' }
+  { name: 'Orgnisation Chart', route: 'org/main' },
+  { name: 'Orgnisation Employees', route: 'org/employee' }
 ];
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: 'org',
-    loadChildren: './modules/org-chart/org-chart.module#OrgChartModule'
+    loadChildren: './modules/org-chart/org-chart.module#OrgModule'
   }
 ];
 

@@ -23,8 +23,8 @@ export class NgOrganizationChartNodeComponent implements OnInit {
   > = new EventEmitter();
   @Output() onDragNode: EventEmitter<any> = new EventEmitter();
 
-  private childrenStyleClass = 'horizontal';
-  private isChildrenVisible = true;
+  childrenStyleClass = 'horizontal';
+  isChildrenVisible = true;
 
   constructor() {}
 
