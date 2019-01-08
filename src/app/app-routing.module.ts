@@ -8,7 +8,8 @@ export const MENU = [
   { name: 'rxjs performance', route: 'rxjs' },
   { name: 'rxjs observable', route: 'rxjs/obs' },
   { name: 'Orgnisation Chart', route: 'org/main' },
-  { name: 'Orgnisation Employees', route: 'org/employee' }
+  { name: 'Orgnisation Employees', route: 'org/employee' },
+  { name: 'Orgnisation Tree', route: 'org/tree' }
 ];
 const routes: Routes = [
   { path: '', component: HomeComponent },

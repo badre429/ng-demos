@@ -7,9 +7,14 @@ import { AllMaterialModule } from '../../material.module';
 import { NgOrganizationChartModule } from './ng-organization-chart/ng-organization-chart.module';
 import { EmployeesChartComponent } from './employees/employees.component';
 import { OrgChartModule } from './org-chart/module';
+import { OrganisationTreeComponent } from './organisation-tree/organisation-tree.component';
 
 @NgModule({
-  declarations: [MainComponent, EmployeesChartComponent],
+  declarations: [
+    MainComponent,
+    EmployeesChartComponent,
+    OrganisationTreeComponent
+  ],
   imports: [
     CommonModule,
     OrgChartModule,
