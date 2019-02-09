@@ -9,7 +9,8 @@ export const MENU = [
   { name: 'rxjs observable', route: 'rxjs/obs' },
   { name: 'Orgnisation Chart', route: 'org/main' },
   { name: 'Orgnisation Employees', route: 'org/employee' },
-  { name: 'Orgnisation Tree', route: 'org/tree' }
+  { name: 'Orgnisation Tree', route: 'org/tree' },
+  { name: 'Map', route: 'map' }
 ];
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'org',
     loadChildren: './modules/org-chart/org-chart.module#OrgModule'
+  },
+  {
+    path: 'map',
+    loadChildren: './modules/map-explorer/map-explorer.module#MapExplorerModule'
   }
 ];
 

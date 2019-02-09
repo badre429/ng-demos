@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IEmployee } from 'ng2-org-chart';
 
 @Component({
   selector: 'app-employees',
@@ -19,7 +18,8 @@ export class EmployeesChartComponent implements OnInit {
         img: './assets/data/img/b.JPG',
         subordinates: [
           {
-            name: 'Tina Landry Art Director Art Director Art Director Art Director Art Director',
+            name:
+              'Tina Landry Art Director Art Director Art Director Art Director Art Director',
             designation: 'Budget Analyst',
             subordinates: [
               {
@@ -66,8 +66,10 @@ export class EmployeesChartComponent implements OnInit {
                                     subordinates: []
                                   },
                                   {
-                                    name: 'Deb Curtis Art Director Art Director',
-                                    designation: 'Art Director Art Director Art Director Art Director Art Director',
+                                    name:
+                                      'Deb Curtis Art Director Art Director',
+                                    designation:
+                                      'Art Director Art Director Art Director Art Director Art Director',
                                     img: './assets/data/img/c.JPG',
                                     subordinates: []
                                   }
