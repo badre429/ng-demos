@@ -1,6 +1,6 @@
 .mat-header-row {
   height: 42px !important;
-  background: #F5F5F5;
+  background: #f5f5f5;
 
   .mat-header-cell .mat-sort-header-button {
     text-transform: uppercase;
@@ -20,7 +20,7 @@ mat-row {
 
 tr.mat-header-row {
   height: 42px !important;
-  background: #F5F5F5;
+  background: #f5f5f5;
 
   .mat-header-cell .mat-sort-header-button {
     text-transform: uppercase;
@@ -43,7 +43,7 @@ tr.mat-row {
 }
 
 .mat-actions {
-  background: #F5F5F5;
+  background: #f5f5f5;
 
   .mat-raised-button,
   .mat-button {
@@ -51,7 +51,9 @@ tr.mat-row {
     margin-right: 5px;
   }
 }
-
+.push-sm {
+  margin: 5px;
+}
 .pad-none {
   .mat-dialog-container {
     padding: 0 !important;
